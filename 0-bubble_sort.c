@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "sort.h"
 
 void bubble_sort(int *array, size_t size) {
     for (size_t i = 0; i < size - 1; i++) {
@@ -27,3 +28,4 @@ int main() {
 
     return 0;
 }
+
