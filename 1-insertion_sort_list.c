@@ -28,26 +28,28 @@ void swap_nodes(listint_t **h,listint_t **n1, listint_t *n2)
 * @list: a pointer to the head of a doubly linked list of integers
 * description: prints the list after each swap
 */
-void insertion_sort_list(lisint_t **list)
+void insertion_sort_list(listint_t **list)
 {
-    lisint_t *iter, *insert, *tmp;
+    listint_t *tmp;
+    int n;
 
-    if (list == NULL || *list == NULL || (*list)->next == NULL)
-        return;
-    for (iter = (*list)->next; iter != NULL; iter = tmp)
+    if (!list)
+	    return;
+    tmp = *list;
+    while (tmp)
     {
-        tmp = iter->next;
-        insert = iter->prev;
-
-        while (insert!= NULL && iter->n <insert->n)
-        {
-            swap_nodes(list, &insert, iter);
-            print_list((const listint_t *)*list);
-        }
-    }
-}
-
-
-
-
-}
+	if (tmp->next)
+    	{
+		if (tmp->n > tmp->next->n)
+		{
+			n = tmp->n;
+			*(int *)&tmp->n = tmp->next->n;
+			*(int *)&tmp->next->n = n;
+			tmp = *list;
+			print_list(*list);
+			break;
+		}
+	}
+	tmp = tmp->next;
+     }
+}    
