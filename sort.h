@@ -6,7 +6,7 @@
 
 /* Comparison direction macros for bitonic sort */
 #define UP 0
-#defineDOWN 1
+#define DOWN 1
 
 /**
 * enum bool - Enumeration of Boolean values
