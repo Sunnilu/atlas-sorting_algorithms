@@ -13,7 +13,6 @@ void sort_partition(int *array, int size, int first, int last)
 
 	if (first < last)
 	{
-		pivot = get_pivot_index(array, size, first, last);
 		if (pivot - first > 1)
 		{
 			sort_partition(array, size, first, pivot - 1);
