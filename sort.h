@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "pivot_index.h"
 
 /* Comparison direction macros for bitonic sort */
 #define UP 0
